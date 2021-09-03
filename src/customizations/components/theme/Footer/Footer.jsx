@@ -26,9 +26,9 @@ const messages = defineMessages({
  * @returns {string} Markup of the component
  */
 const Footer = ({ intl }) => (
-  <Segment>
+  <Segment className="footer-seg">
     <Container>
-      <Segment>
+      <Segment basic>
         <div className="footer-row1">
           <div className="icon">
             <a href="#">
@@ -68,7 +68,7 @@ const Footer = ({ intl }) => (
                 123 Main Street
                 <br />
                 New York, NY 10001
-              </p>{' '}
+              </p>
               <p>
                 <strong>Hours</strong>
                 <br />
@@ -79,18 +79,16 @@ const Footer = ({ intl }) => (
             </div>
           </div>
         </section>
-        <div className="footer-row3">
-          <div>
-            <h4>Twenty Twenty</h4>
-            <span className="footer-text">
-              powered by{' '}
-              <a className="footer-low" href="#">
-                kitconcept.
-              </a>
-            </span>
-          </div>
-        </div>
       </Segment>
+      <div className="footer-row3">
+        <p>Twenty Twenty</p>
+        <p>
+          powered by{' '}
+          <a className="footer-low" href="#">
+            kitconcept.
+          </a>
+        </p>
+      </div>
     </Container>
   </Segment>
 );
