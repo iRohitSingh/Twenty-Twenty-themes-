@@ -18,6 +18,9 @@ const messages = defineMessages({
     defaultMessage: 'Copyright',
   },
 });
+const topscrollhandler = () => {
+  window.scrollTo(0, 0);
+};
 
 /**
  * Component to display the footer.
@@ -26,7 +29,7 @@ const messages = defineMessages({
  * @returns {string} Markup of the component
  */
 const Footer = ({ intl }) => (
-  <Segment className="footer-seg">
+  <Segment className="footer">
     <Container>
       <Segment basic>
         <div className="footer-row1">
@@ -51,7 +54,7 @@ const Footer = ({ intl }) => (
         </div>
         <section className="footer-widgets">
           <div>
-            <h2 className="footer">About This Site</h2>
+            <h2 className="footer-h2">About This Site</h2>
             <div>
               <p>
                 This may be a good place to introduce yourself and your site or
@@ -60,17 +63,17 @@ const Footer = ({ intl }) => (
             </div>
           </div>
           <div>
-            <h2>Find Us</h2>
+            <h2 className="footer-h2">Find Us</h2>
             <div>
               <p>
-                <strong>Address</strong>
+                <strong className="strong-footer">Address</strong>
                 <br />
                 123 Main Street
                 <br />
                 New York, NY 10001
               </p>
               <p>
-                <strong>Hours</strong>
+                <strong className="strong-footer">Hours</strong>
                 <br />
                 Monday–Friday: 9:00AM–5:00PM
                 <br />
@@ -81,13 +84,12 @@ const Footer = ({ intl }) => (
         </section>
       </Segment>
       <div className="footer-row3">
-        <p>Twenty Twenty</p>
-        <p>
-          powered by{' '}
-          <a className="footer-low" href="#">
-            kitconcept.
-          </a>
-        </p>
+        <p className="year-21">© 2021</p>
+        <p className="year">Twenty Twenty</p>
+        <p className="footer-low">Powered by kitconcept</p>
+        <button className="top-btn" onClick={topscrollhandler}>
+          To the top ↑
+        </button>
       </div>
     </Container>
   </Segment>

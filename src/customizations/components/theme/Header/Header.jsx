@@ -14,9 +14,6 @@ import facebookSVG from './facebook.svg';
 import twitterSVG from './twitter.svg';
 import instagramSVG from './instagram.svg';
 import messageSVG from './message.svg';
-{
-  /* <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> */
-}
 
 import {
   Anontools,
@@ -27,30 +24,12 @@ import {
 } from '@plone/volto/components';
 import cx from 'classnames';
 
-/**
- * Header component class.
- * @class Header
- * @extends Component
- */
 class Header extends Component {
-  /**
-   * Property types.
-   * @property {Object} propTypes Property types.
-   * @static
-   */
   static propTypes = {
     token: PropTypes.string,
     pathname: PropTypes.string.isRequired,
   };
-  // const menubarhandler = ()=>{
 
-  // }
-
-  /**
-   * Default properties.
-   * @property {Object} defaultProps Default properties.
-   * @static
-   */
   static defaultProps = {
     token: null,
   };
@@ -63,11 +42,7 @@ class Header extends Component {
   showMenuHandler = () => this.setState({ showMenu: !this.state.showMenu });
   showSearchHandler = () =>
     this.setState({ showSearch: !this.state.showSearch });
-  /**
-   * Render method.
-   * @method render
-   * @returns {string} Markup for the component.
-   */
+
   render() {
     return (
       <Segment basic className="header-wrapper twenty" role="banner">
@@ -77,9 +52,13 @@ class Header extends Component {
             'hide-menu': !this.state.showMenu,
           })}
         >
-          <div>
+          <div className="close-menu">
             <button className="close-bar-menu" onClick={this.showMenuHandler}>
-              <img src={closebarSVG} alt="close icon" />
+              <img
+                className="img-close-bar-menu"
+                src={closebarSVG}
+                alt="close icon"
+              />
             </button>
           </div>
           <div className="parent">
@@ -127,7 +106,7 @@ class Header extends Component {
           <div className="searchText">
             <div className="input-search">
               {' '}
-              <input type="text" placeholder="search" />
+              <input type="text" placeholder="search..." />
             </div>
             <div className="close-bar">
               <button onClick={this.showSearchHandler}>
@@ -140,7 +119,10 @@ class Header extends Component {
           <div className="header-row1">
             <div>
               {!this.state.showSearch && (
-                <button className="btn3" onClick={this.showSearchHandler}>
+                <button
+                  className="search-bar-icon"
+                  onClick={this.showSearchHandler}
+                >
                   <img className="sm-icon" src={searchSVG} alt="search icon" />
                 </button>
               )}
@@ -150,7 +132,10 @@ class Header extends Component {
             </div>
             <div>
               {!this.state.showMenu && (
-                <button className="btn1" onClick={this.showMenuHandler}>
+                <button
+                  className="menu-bar-icon"
+                  onClick={this.showMenuHandler}
+                >
                   <img
                     className="menu-bar"
                     src={menubarSVG}
