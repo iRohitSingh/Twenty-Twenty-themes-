@@ -29,9 +29,9 @@ const topscrollhandler = () => {
  * @returns {string} Markup of the component
  */
 const Footer = ({ intl }) => (
-  <Segment className="footer">
-    <Container>
-      <Segment basic>
+  <Segment className="footer-segment">
+    <Container className="footer-container">
+      <Segment basic className="footer-segment2">
         <div className="footer-row1">
           <div className="icon">
             <a href="#">
@@ -89,6 +89,14 @@ const Footer = ({ intl }) => (
         <p className="footer-low">Powered by kitconcept</p>
         <button className="top-btn" onClick={topscrollhandler}>
           To the top ↑
+        </button>
+      </div>
+      <div className="footer-row4">
+        <p className="year-21">© 2021</p>
+        <p className="year">Twenty Twenty</p>
+
+        <button className="top-btn2" onClick={topscrollhandler}>
+          Up↑
         </button>
       </div>
     </Container>

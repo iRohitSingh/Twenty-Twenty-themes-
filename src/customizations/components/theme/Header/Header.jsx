@@ -46,6 +46,7 @@ class Header extends Component {
   render() {
     return (
       <Segment basic className="header-wrapper twenty" role="banner">
+        {this.state.showMenu && <div className="overlay"></div>}
         <div
           className={cx({
             'show-menu': this.state.showMenu,
@@ -117,7 +118,7 @@ class Header extends Component {
         </div>
         <Container>
           <div className="header-row1">
-            <div>
+            <div className="search-container">
               {!this.state.showSearch && (
                 <button
                   className="search-bar-icon"
@@ -130,8 +131,25 @@ class Header extends Component {
             <div>
               <div className="logo">Twenty Twenty</div>
             </div>
-            <div>
-              {!this.state.showMenu && (
+            <div className="right-side">
+              <div className="right-side-nav">
+                {' '}
+                <li className="nav">
+                  <a className="active-site page-link" href="#">
+                    Home
+                  </a>
+                  <a className="page-link" href="#">
+                    About
+                  </a>
+                  <a className="page-link" href="#">
+                    Blog
+                  </a>
+                  <a className="page-link" href="#">
+                    Contact
+                  </a>
+                </li>
+              </div>
+              <div>
                 <button
                   className="menu-bar-icon"
                   onClick={this.showMenuHandler}
@@ -142,7 +160,17 @@ class Header extends Component {
                     alt="menu-bar icon"
                   />
                 </button>
-              )}
+              </div>
+
+              <div className="search-container-2">
+                {' '}
+                <button
+                  className="search-bar-icon"
+                  onClick={this.showSearchHandler}
+                >
+                  <img className="sm-icon" src={searchSVG} alt="search icon" />
+                </button>
+              </div>
             </div>
           </div>
         </Container>

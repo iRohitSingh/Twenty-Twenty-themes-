@@ -26,6 +26,7 @@
       height: 7rem;
       font-size: 3.2rem;
       border: 1px dotted black;
+      text-indent: 5px;
     }
   }
 
@@ -57,17 +58,40 @@
   display: none;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: hsla(0deg, 0, 0, 0.2);
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    transition: transform 400ms;
+  }
+  to {
+    transform: translateX(0%);
+    transition: transform 400ms;
+  }
+}
+
 .show-menu {
   display: initial;
   position: fixed;
   top: 0;
   background: white;
-  width: 100%;
+  right: 0;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: hidden;
+  animation: slide-in 400ms;
 
-  @media only screen and (max-width: (@largestMobileScreen)) {
+  @media only screen and (max-width: 1100px) {
     overflow-y: hidden;
+    width: 100%;
+    right: unset;
   }
 
   .parent {
@@ -80,7 +104,7 @@
     margin-left: auto;
     display: flex;
     padding: 20px;
-    margin-right: 58px;
+    margin-right: 5px;
     margin-top: 38px;
     border: none;
     background: none;
@@ -92,6 +116,7 @@
 }
 .close-menu {
   border-bottom: 0.1rem solid #dedfdf;
+  padding-top: 20px;
 }
 
 .nav a {
@@ -102,7 +127,6 @@
   padding: 2.3rem;
   font-size: 2rem;
   font-weight: 700;
-
   border-bottom: 0.1rem solid #dedfdf;
 }
 .nav {
@@ -123,7 +147,6 @@
 }
 .row {
   display: flex;
-
   justify-content: center;
   padding: 80px;
 
@@ -152,16 +175,23 @@
   border: none;
   background: none;
   cursor: pointer;
+  padding: 0 20px;
+  border-right: 0.1rem solid #dedfdf;
+  border-left: 0.1rem solid #dedfdf;
 }
+
 .search-bar-icon {
   border: none;
   background: none;
   cursor: pointer;
+  padding: 0 20px;
 }
 
 .ui.basic.segment.header-wrapper.twenty {
-  padding: 25px 0;
+  justify-content: space-evenly;
+  padding: 20px 0;
   z-index: 10;
+
   @media only screen and (min-width: (@largestMobileScreen)) {
     flex-flow: column;
     justify-content: center;
@@ -176,6 +206,52 @@
   text-decoration: underline;
 }
 
+.search-container {
+  display: none;
+}
+
+.right-side {
+  display: flex;
+  justify-content: space-between;
+  //gap: 40px;
+
+  a.page-link {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0px;
+    border-bottom: none;
+  }
+
+  .right-side-nav {
+    display: flex;
+
+    .nav {
+      display: flex;
+      gap: 20px;
+      padding: 0 20px 0 0;
+    }
+  }
+}
+@media (max-width: 1100px) {
+  .right-side .right-side-nav .nav {
+    display: none;
+  }
+  .search-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .search-container-2 {
+    display: none;
+  }
+  .menu-bar-icon {
+    padding: 0;
+    border: none;
+  }
+  .search-bar-icon {
+    padding: 0;
+  }
+}
+
 //Footer
 //#############################################################################################
 
@@ -186,7 +262,7 @@
   flex-basis: 0;
   gap: 120px;
   // justify-content: space-between;
-  padding: 6rem 0;
+  padding: 3rem 0;
   border-bottom: 0.1rem solid #dedfdf;
 
   @media only screen and (max-width: (@largestMobileScreen)) {
@@ -243,7 +319,7 @@ p {
 .footer-row3 {
   display: flex;
   gap: 50px;
-  font-size: 1.8rem;
+  font-size: 1.1rem;
   padding: 1.3rem;
   align-items: center;
   p {
@@ -259,13 +335,7 @@ p {
     text-decoration: underline;
     cursor: pointer;
   }
-  @media only screen and (max-width: (@largestMobileScreen)) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 6px;
-    padding: 18px 0;
-    text-align: center;
+  @media (max-width: 1100px) {
   }
 }
 .year-21 {
@@ -277,4 +347,34 @@ p {
 .year:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+.footer-row4 {
+  display: none;
+
+  gap: 50px;
+  font-size: 16px;
+  padding: 1.3rem;
+  align-items: center;
+  p {
+    margin-bottom: 0px !important;
+  }
+  .top-btn2 {
+    color: #6d6d6d;
+    margin-left: auto;
+    border: none;
+    background: none;
+  }
+  .top-btn2:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+@media (max-width: 1000px) {
+  .footer-row4 {
+    display: flex;
+    gap: 30px;
+  }
+  .footer-row3 {
+    display: none;
+  }
 }
