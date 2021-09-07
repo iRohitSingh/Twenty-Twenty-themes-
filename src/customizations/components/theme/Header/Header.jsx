@@ -53,46 +53,52 @@ class Header extends Component {
             'hide-menu': !this.state.showMenu,
           })}
         >
-          <div className="close-menu">
-            <button className="close-bar-menu" onClick={this.showMenuHandler}>
-              <img
-                className="img-close-bar-menu"
-                src={closebarSVG}
-                alt="close icon"
-              />
-            </button>
-          </div>
-          <div className="parent">
-            <div>
-              <li className="nav">
-                <a className="active-site page-link" href="#">
-                  Home
-                </a>
-                <a className="page-link" href="#">
-                  About
-                </a>
-                <a className="page-link" href="#">
-                  Blog
-                </a>
-                <a className="page-link" href="#">
-                  Contact
-                </a>
-              </li>
+          <div className="header-nav">
+            <div className="close-menu">
+              <button className="close-bar-menu" onClick={this.showMenuHandler}>
+                <img
+                  className="img-close-bar-menu"
+                  src={closebarSVG}
+                  alt="close icon"
+                />
+              </button>
             </div>
-            <div className="row">
-              <div className="icon">
-                <a href="#">
-                  <img className="sm" src={facebookSVG} alt="facebook icon" />
-                </a>
-                <a href="#">
-                  <img className="sm" src={twitterSVG} alt="twitter icon" />
-                </a>
-                <a href="#">
-                  <img className="sm" src={instagramSVG} alt="instagram icon" />
-                </a>
-                <a href="#">
-                  <img className="sm" src={messageSVG} alt="e-mail icon" />
-                </a>
+            <div className="parent">
+              <div>
+                <li className="nav">
+                  <a className="active-site page-link" href="#">
+                    Home
+                  </a>
+                  <a className="page-link" href="#">
+                    About
+                  </a>
+                  <a className="page-link" href="#">
+                    Blog
+                  </a>
+                  <a className="page-link" href="#">
+                    Contact
+                  </a>
+                </li>
+              </div>
+              <div className="row">
+                <div className="icon">
+                  <a href="#">
+                    <img className="sm" src={facebookSVG} alt="facebook icon" />
+                  </a>
+                  <a href="#">
+                    <img className="sm" src={twitterSVG} alt="twitter icon" />
+                  </a>
+                  <a href="#">
+                    <img
+                      className="sm"
+                      src={instagramSVG}
+                      alt="instagram icon"
+                    />
+                  </a>
+                  <a href="#">
+                    <img className="sm" src={messageSVG} alt="e-mail icon" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -129,7 +135,7 @@ class Header extends Component {
               )}
             </div>
             <div>
-              <div className="logo">Twenty Twenty</div>
+              <div className="logo-header">Twenty Twenty</div>
             </div>
             <div className="right-side">
               <div className="right-side-nav">

@@ -53,7 +53,7 @@ const Footer = ({ intl }) => (
           </div>
         </div>
         <section className="footer-widgets">
-          <div>
+          <div className="footer1">
             <h2 className="footer-h2">About This Site</h2>
             <div>
               <p>
@@ -62,17 +62,17 @@ const Footer = ({ intl }) => (
               </p>
             </div>
           </div>
-          <div>
+          <div className="footer2">
             <h2 className="footer-h2">Find Us</h2>
             <div>
-              <p>
+              <p className="">
                 <strong className="strong-footer">Address</strong>
                 <br />
                 123 Main Street
                 <br />
                 New York, NY 10001
               </p>
-              <p>
+              <p className="">
                 <strong className="strong-footer">Hours</strong>
                 <br />
                 Monday–Friday: 9:00AM–5:00PM
@@ -84,16 +84,27 @@ const Footer = ({ intl }) => (
         </section>
       </Segment>
       <div className="footer-row3">
-        <p className="year-21">© 2021</p>
-        <p className="year">Twenty Twenty</p>
-        <p className="footer-low">Powered by kitconcept</p>
+        <div className="year">
+          <p className="year-21">
+            © 2021{' '}
+            <a href="#" className="year-twenty">
+              Twenty Twenty
+            </a>
+          </p>
+          {/* <p className="year">Twenty Twenty</p> */}
+          <p className="footer-low">Powered by kitconcept</p>
+        </div>
         <button className="top-btn" onClick={topscrollhandler}>
           To the top ↑
         </button>
       </div>
       <div className="footer-row4">
-        <p className="year-21">© 2021</p>
-        <p className="year">Twenty Twenty</p>
+        <p className="year-21">
+          © 2021{' '}
+          <a href="#" className="year-twenty">
+            Twenty Twenty
+          </a>
+        </p>
 
         <button className="top-btn2" onClick={topscrollhandler}>
           Up↑
