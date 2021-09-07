@@ -107,7 +107,7 @@ const Footer = ({ intl }) => (
         </p>
 
         <button className="top-btn2" onClick={topscrollhandler}>
-          Up↑
+          Up ↑
         </button>
       </div>
     </Container>

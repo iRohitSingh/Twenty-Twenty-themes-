@@ -122,7 +122,7 @@ class Header extends Component {
             </div>
           </div>
         </div>
-        <Container>
+        <div className="header-container">
           <div className="header-row1">
             <div className="search-container">
               {!this.state.showSearch && (
@@ -179,7 +179,7 @@ class Header extends Component {
               </div>
             </div>
           </div>
-        </Container>
+        </div>
       </Segment>
     );
   }
