@@ -80,7 +80,7 @@ class Header extends Component {
                   </a>
                 </li>
               </div>
-              <div className="row">
+              <div className="row-svg-header">
                 <div className="icon">
                   <a href="#">
                     <img className="sm" src={facebookSVG} alt="facebook icon" />
