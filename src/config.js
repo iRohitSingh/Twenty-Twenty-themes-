@@ -14,34 +14,38 @@
  */
 
 // All your imports required for the config here BEFORE this line
-import '@plone/volto/config';
-import {MainSliderEditBlock ,MainSliderViewBlock } from '@package/components'
+import{ButtonViewBlock,ButtonEditBlock} from '@package/components';
 import sliderSVG from '@plone/volto/icons/slider.svg';
 
 import { defineMessages } from 'react-intl';
+import '@plone/volto/config';
+
 
 
 
 defineMessages({
-  mainslider: {
-    id: 'Main Slider',
-    defaultMessage: 'Main Slider',
+  button: {
+    id: 'button',
+    defaultMessage: 'button',
   },
 });
 
 
-const customBlocks = {
-  mainslider: {
-    id: 'mainslider', 
-    title: 'Main Slider', 
+
+
+
+export default function applyConfig(config){const customBlocks = {
+  buttonBlock: {
+    id: 'buttonBlock', 
+    title: 'ButtonRohit', 
     icon: sliderSVG, 
     group: 'common', 
-    view: MainSliderViewBlock, 
-    edit: MainSliderEditBlock, 
+    view: ButtonViewBlock, 
+    edit: ButtonEditBlock, 
     restricted: false,
     mostUsed: true, 
     blockHasOwnFocusManagement: false, 
-    sidebarTab: 0, 
+    sidebarTab: 1, 
     security: {
       addPermission: [], 
       view: [], 
@@ -49,18 +53,14 @@ const customBlocks = {
    },
 };
 
+  config.blocks = {
+    ...config.blocks,
+    blocksConfig: {
+      ...config.blocks.blocksConfig,
+      ...customBlocks
+    }
+  }
 
-const applyConfig = (config) => {
-  return {
-    ...config,
-    blocks: {
-      ...config.blocks,
-      blocksConfig: {
-        ...config.blocks.blocksConfig,
-        ...customBlocks,
-      },
-    },
-  };
-};
+  return config
 
-export default applyConfig;
+}

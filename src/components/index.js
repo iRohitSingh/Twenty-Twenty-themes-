@@ -9,8 +9,8 @@
  * };
  */
 
-import MainSliderViewBlock from './Blocks/MainSlide/View';
-import MainSliderEditBlock from './Blocks/MainSlide/Edit';
+import ButtonViewBlock from './Blocks/Button/View';
+import ButtonEditBlock from './Blocks/Button/Edit';
 
 
-export{MainSliderViewBlock,MainSliderEditBlock};
+export{ButtonViewBlock,ButtonEditBlock};
