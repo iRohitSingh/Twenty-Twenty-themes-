@@ -444,6 +444,10 @@ p {
   font-size: 17px;
   font-family: Inter-VariableFont_slnt, wght;
   text-transform: uppercase;
+  margin: 40px 300px;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 .ui.button.button-container {
   background-color: #cd2653;
@@ -453,6 +457,11 @@ p {
   font-size: 17px;
   font-family: Inter-VariableFont_slnt, wght;
   text-transform: uppercase;
+  text-decoration: none;
+  margin: 40px 300px;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 .block-button.align.center {
   text-align: center;
@@ -515,4 +524,42 @@ hr.Seperator-block {
   @media (max-width: 1025px) {
     margin: 40px 20px;
   }
+}
+
+//############################################################################################
+// Quote-block
+.quote-block {
+  margin: 40px 300px;
+}
+
+.quote-block::before {
+  background: #fff;
+  border-radius: 50%;
+  color: #cd2653;
+  content: '”';
+  display: block;
+  font-size: 62px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 auto 15px auto;
+  text-align: center;
+  height: 44px;
+  width: 44px;
+}
+.quote-block-p {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: Inter-VariableFont_slnt, wght;
+  text-align: center;
+  margin: 0 0 0 0;
+}
+.quote-block-city {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Inter-VariableFont_slnt, wght;
+  color: rgb(109, 109, 109);
+  text-align: center;
+  margin-top: 20px;
 }

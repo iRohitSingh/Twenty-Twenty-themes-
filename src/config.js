@@ -14,7 +14,8 @@
  */
 
 // All your imports required for the config here BEFORE this line
-import{ButtonViewBlock,ButtonEditBlock,seperatorViewBlock,seperatorEditBlock} from '@package/components';
+import{ButtonViewBlock,ButtonEditBlock,seperatorViewBlock,seperatorEditBlock
+,QupteViewBlock,QupteEditBlock} from '@package/components';
 import sliderSVG from '@plone/volto/icons/slider.svg';
 
 import { defineMessages } from 'react-intl';
@@ -34,6 +35,11 @@ defineMessages({
     id: 'seperatorBlock',
     defaultMessage: 'seperatorBlock',
   },
+});defineMessages({
+  QuoteBlock: {
+    id: 'QuoteBlock',
+    defaultMessage: 'QuoteBlock',
+  },
 });
 
 
@@ -43,7 +49,7 @@ defineMessages({
 export default function applyConfig(config){const customBlocks = {
   buttonBlock: {
     id: 'buttonBlock', 
-    title: 'ButtonRohit', 
+    title: 'ButtonBlock', 
     icon: sliderSVG, 
     group: 'common', 
     view: ButtonViewBlock, 
@@ -59,7 +65,7 @@ export default function applyConfig(config){const customBlocks = {
    },
    seperatorBlock: {
     id: 'seperatorBlock', 
-    title: 'seperatorRohit', 
+    title: 'seperatorBlock', 
     icon: sliderSVG, 
     group: 'common', 
     view: seperatorViewBlock, 
@@ -68,6 +74,22 @@ export default function applyConfig(config){const customBlocks = {
     mostUsed: true, 
     blockHasOwnFocusManagement: false, 
     sidebarTab: 0, 
+    security: {
+      addPermission: [], 
+      view: [], 
+    },
+   },
+   QuoteBlock: {
+    id: 'QuoteBlock', 
+    title: 'QuoteBlock', 
+    icon: sliderSVG, 
+    group: 'common', 
+    view: QupteViewBlock, 
+    edit: QupteEditBlock, 
+    restricted: false,
+    mostUsed: true, 
+    blockHasOwnFocusManagement: false, 
+    sidebarTab: 1, 
     security: {
       addPermission: [], 
       view: [], 
