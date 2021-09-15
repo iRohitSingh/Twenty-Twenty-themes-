@@ -14,7 +14,7 @@
  */
 
 // All your imports required for the config here BEFORE this line
-import{ButtonViewBlock,ButtonEditBlock} from '@package/components';
+import{ButtonViewBlock,ButtonEditBlock,seperatorViewBlock,seperatorEditBlock} from '@package/components';
 import sliderSVG from '@plone/volto/icons/slider.svg';
 
 import { defineMessages } from 'react-intl';
@@ -27,6 +27,12 @@ defineMessages({
   button: {
     id: 'button',
     defaultMessage: 'button',
+  },
+});
+defineMessages({
+  seperatorBlock: {
+    id: 'seperatorBlock',
+    defaultMessage: 'seperatorBlock',
   },
 });
 
@@ -46,6 +52,22 @@ export default function applyConfig(config){const customBlocks = {
     mostUsed: true, 
     blockHasOwnFocusManagement: false, 
     sidebarTab: 1, 
+    security: {
+      addPermission: [], 
+      view: [], 
+    },
+   },
+   seperatorBlock: {
+    id: 'seperatorBlock', 
+    title: 'seperatorRohit', 
+    icon: sliderSVG, 
+    group: 'common', 
+    view: seperatorViewBlock, 
+    edit: seperatorEditBlock, 
+    restricted: false,
+    mostUsed: true, 
+    blockHasOwnFocusManagement: false, 
+    sidebarTab: 0, 
     security: {
       addPermission: [], 
       view: [], 
