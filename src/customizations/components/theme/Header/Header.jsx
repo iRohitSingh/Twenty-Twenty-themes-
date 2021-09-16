@@ -8,10 +8,10 @@ import { Container, Segment } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import searchSVG from './search.svg';
-import menubarSVG from './menu-bar.svg';
-import closebarSVG from './close-bar.svg';
-
+//import searchSVG from './search.svg';
+import searchSVG from '../../../../icons/search.svg';
+import closebarSVG from '../../../../icons/close-bar.svg';
+import menubarSVG from '../../../../icons/menu-bar.svg';
 import facebookSvg from '../../../../icons/facebook.svg';
 import twitterSVG from '../../../../icons/twitter.svg';
 import instagramSVG from '../../../../icons/instagram.svg';
@@ -60,10 +60,11 @@ class Header extends Component {
           <div className="header-nav">
             <div className="close-menu">
               <button className="close-bar-menu" onClick={this.showMenuHandler}>
-                <img
+                <Icon
+                  name={closebarSVG}
+                  size="20px"
+                  color="#000"
                   className="img-close-bar-menu"
-                  src={closebarSVG}
-                  alt="close icon"
                 />
               </button>
             </div>
@@ -137,7 +138,12 @@ class Header extends Component {
             </div>
             <div className="close-bar">
               <button onClick={this.showSearchHandler}>
-                <img className="close-bar" src={closebarSVG} alt="close icon" />
+                <Icon
+                  name={closebarSVG}
+                  size="25px"
+                  color="#000"
+                  className="close-bar"
+                />
               </button>
             </div>
           </div>
@@ -150,7 +156,12 @@ class Header extends Component {
                   className="search-bar-icon"
                   onClick={this.showSearchHandler}
                 >
-                  <img className="sm-icon" src={searchSVG} alt="search icon" />
+                  <Icon
+                    name={searchSVG}
+                    size="23px"
+                    color="#000"
+                    className="search-icon"
+                  />
                 </button>
               )}
             </div>
@@ -180,10 +191,11 @@ class Header extends Component {
                   className="menu-bar-icon"
                   onClick={this.showMenuHandler}
                 >
-                  <img
+                  <Icon
+                    name={menubarSVG}
+                    size="7px"
+                    color="#000"
                     className="menu-bar"
-                    src={menubarSVG}
-                    alt="menu-bar icon"
                   />
                 </button>
               </div>
@@ -194,7 +206,12 @@ class Header extends Component {
                   className="search-bar-icon"
                   onClick={this.showSearchHandler}
                 >
-                  <img className="sm-icon" src={searchSVG} alt="search icon" />
+                  <Icon
+                    name={searchSVG}
+                    size="23px"
+                    color="#000"
+                    className="search-icon"
+                  />
                 </button>
               </div>
             </div>
