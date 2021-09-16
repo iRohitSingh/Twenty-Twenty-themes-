@@ -14,15 +14,18 @@
  */
 
 // All your imports required for the config here BEFORE this line
-import{ButtonViewBlock,ButtonEditBlock,seperatorViewBlock,seperatorEditBlock
-,QupteViewBlock,QupteEditBlock} from '@package/components';
+import {
+  ButtonViewBlock,
+  ButtonEditBlock,
+  seperatorViewBlock,
+  seperatorEditBlock,
+  QupteViewBlock,
+  QupteEditBlock,
+} from '@package/components';
 import sliderSVG from '@plone/volto/icons/slider.svg';
 
 import { defineMessages } from 'react-intl';
 import '@plone/volto/config';
-
-
-
 
 defineMessages({
   button: {
@@ -35,76 +38,73 @@ defineMessages({
     id: 'seperatorBlock',
     defaultMessage: 'seperatorBlock',
   },
-});defineMessages({
+});
+defineMessages({
   QuoteBlock: {
     id: 'QuoteBlock',
     defaultMessage: 'QuoteBlock',
   },
 });
 
-
-
-
-
-export default function applyConfig(config){const customBlocks = {
-  buttonBlock: {
-    id: 'buttonBlock', 
-    title: 'ButtonBlock', 
-    icon: sliderSVG, 
-    group: 'common', 
-    view: ButtonViewBlock, 
-    edit: ButtonEditBlock, 
-    restricted: false,
-    mostUsed: true, 
-    blockHasOwnFocusManagement: false, 
-    sidebarTab: 1, 
-    security: {
-      addPermission: [], 
-      view: [], 
+export default function applyConfig(config) {
+  const customBlocks = {
+    buttonBlock: {
+      id: 'buttonBlock',
+      title: 'ButtonBlock',
+      icon: sliderSVG,
+      group: 'common',
+      view: ButtonViewBlock,
+      edit: ButtonEditBlock,
+      restricted: false,
+      mostUsed: true,
+      blockHasOwnFocusManagement: false,
+      sidebarTab: 1,
+      security: {
+        addPermission: [],
+        view: [],
+      },
     },
-   },
-   seperatorBlock: {
-    id: 'seperatorBlock', 
-    title: 'seperatorBlock', 
-    icon: sliderSVG, 
-    group: 'common', 
-    view: seperatorViewBlock, 
-    edit: seperatorEditBlock, 
-    restricted: false,
-    mostUsed: true, 
-    blockHasOwnFocusManagement: false, 
-    sidebarTab: 0, 
-    security: {
-      addPermission: [], 
-      view: [], 
+    seperatorBlock: {
+      id: 'seperatorBlock',
+      title: 'seperatorBlock',
+      icon: sliderSVG,
+      group: 'common',
+      view: seperatorViewBlock,
+      edit: seperatorEditBlock,
+      restricted: false,
+      mostUsed: true,
+      blockHasOwnFocusManagement: false,
+      sidebarTab: 0,
+      security: {
+        addPermission: [],
+        view: [],
+      },
     },
-   },
-   QuoteBlock: {
-    id: 'QuoteBlock', 
-    title: 'QuoteBlock', 
-    icon: sliderSVG, 
-    group: 'common', 
-    view: QupteViewBlock, 
-    edit: QupteEditBlock, 
-    restricted: false,
-    mostUsed: true, 
-    blockHasOwnFocusManagement: false, 
-    sidebarTab: 1, 
-    security: {
-      addPermission: [], 
-      view: [], 
+    QuoteBlock: {
+      id: 'QuoteBlock',
+      title: 'QuoteBlock',
+      icon: sliderSVG,
+      group: 'common',
+      view: QupteViewBlock,
+      edit: QupteEditBlock,
+      restricted: false,
+      mostUsed: true,
+      blockHasOwnFocusManagement: false,
+      sidebarTab: 1,
+      security: {
+        addPermission: [],
+        view: [],
+      },
     },
-   },
-};
+  };
 
   config.blocks = {
     ...config.blocks,
     blocksConfig: {
       ...config.blocks.blocksConfig,
-      ...customBlocks
-    }
-  }
+      ...customBlocks,
+    },
+  };
 
-  return config
-
+  return config;
 }

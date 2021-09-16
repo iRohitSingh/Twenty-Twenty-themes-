@@ -7,13 +7,15 @@ import React, { Component } from 'react';
 import { Container, Segment } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+
 import searchSVG from './search.svg';
 import menubarSVG from './menu-bar.svg';
 import closebarSVG from './close-bar.svg';
-import facebookSVG from './facebook.svg';
-import twitterSVG from './twitter.svg';
-import instagramSVG from './instagram.svg';
-import messageSVG from './message.svg';
+
+import facebookSvg from '../../../../icons/facebook.svg';
+import twitterSVG from '../../../../icons/twitter.svg';
+import instagramSVG from '../../../../icons/instagram.svg';
+import messageSVG from '../../../../icons/message.svg';
 
 import {
   Anontools,
@@ -21,7 +23,9 @@ import {
   Logo,
   Navigation,
   SearchWidget,
+  Icon,
 } from '@plone/volto/components';
+
 import cx from 'classnames';
 
 class Header extends Component {
@@ -83,20 +87,36 @@ class Header extends Component {
               <div className="row-svg-header">
                 <div className="icon">
                   <a href="#">
-                    <img className="sm" src={facebookSVG} alt="facebook icon" />
-                  </a>
-                  <a href="#">
-                    <img className="sm" src={twitterSVG} alt="twitter icon" />
-                  </a>
-                  <a href="#">
-                    <img
+                    <Icon
+                      name={facebookSvg}
+                      size="24px"
+                      color="#fff"
                       className="sm"
-                      src={instagramSVG}
-                      alt="instagram icon"
                     />
                   </a>
                   <a href="#">
-                    <img className="sm" src={messageSVG} alt="e-mail icon" />
+                    <Icon
+                      name={twitterSVG}
+                      size="24px"
+                      color="#fff"
+                      className="sm"
+                    />
+                  </a>
+                  <a href="#">
+                    <Icon
+                      name={instagramSVG}
+                      size="24px"
+                      color="#fff"
+                      className="sm"
+                    />
+                  </a>
+                  <a href="#">
+                    <Icon
+                      name={messageSVG}
+                      size="24px"
+                      color="#fff"
+                      className="sm"
+                    />
                   </a>
                 </div>
               </div>

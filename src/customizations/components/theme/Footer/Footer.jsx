@@ -7,10 +7,11 @@ import React from 'react';
 import { Container, List, Segment } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
-import facebookSVG from './facebook.svg';
-import twitterSVG from './twitter.svg';
-import instagramSVG from './instagram.svg';
-import messageSVG from './message.svg';
+import facebookSvg from '../../../../icons/facebook.svg';
+import twitterSVG from '../../../../icons/twitter.svg';
+import instagramSVG from '../../../../icons/instagram.svg';
+import messageSVG from '../../../../icons/message.svg';
+import { Icon } from '@plone/volto/components';
 
 const messages = defineMessages({
   copyright: {
@@ -35,20 +36,36 @@ const Footer = ({ intl }) => (
         <div className="footer-row1">
           <div className="icon">
             <a href="#">
-              <img className="sm-icon" src={facebookSVG} alt="facebook icon" />
-            </a>
-            <a href="#">
-              <img className="sm-icon" src={twitterSVG} alt="twitter icon" />
-            </a>
-            <a href="#">
-              <img
+              <Icon
+                name={facebookSvg}
+                size="24px"
+                color="#fff"
                 className="sm-icon"
-                src={instagramSVG}
-                alt="instagram icon"
               />
             </a>
             <a href="#">
-              <img className="sm-icon" src={messageSVG} alt="e-mail icon" />
+              <Icon
+                className="sm-icon"
+                name={twitterSVG}
+                size="24px"
+                color="#fff"
+              />
+            </a>
+            <a href="#">
+              <Icon
+                className="sm-icon"
+                name={instagramSVG}
+                size="24px"
+                color="#fff"
+              />
+            </a>
+            <a href="#">
+              <Icon
+                className="sm-icon"
+                name={messageSVG}
+                size="24"
+                color="#fff"
+              />
             </a>
           </div>
         </div>

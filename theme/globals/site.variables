@@ -1,1 +1,8 @@
 @fontName : 'Roboto';
+@darkPink:#cd2653;
+@white:#ffffff;
+@black:#000000;
+@darkBlack:#a20d0d00;
+@doveGray:#6d6d6d;
+@athensGray:#dedfdf;
+@mobileBreakPoint: 760px;
